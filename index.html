@@ -20,7 +20,7 @@ th,td {
 </style>
 </head>
 <body>
-<table align="center" border=0>
+<table align="center" id="tab" border=0>
 <tr>
 <th><b>&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</b></th>
 <td><b id="name">(Name of Preson who imitates)</b>&nbsp;&nbsp;</td>
@@ -121,13 +121,19 @@ sData=JSON.parse(localStorage.getItem("sData"));
 window.location.reload();
 }
 function next(){
+	if(sData.length==0){
+		document.getElementById("tab").style.display="none";
+		
+	}
+	else{
 	var randVar= Math.floor((Math.random() * sData.length));
-	document.getElementById("name").innerHTML=sData[randVar][0];
-	document.getElementById("roll").innerHTML=sData[randVar][1];
+	document.getElementById("name").innerHTML=sData[randVar][1];
+	document.getElementById("roll").innerHTML=sData[randVar][0];
 	document.getElementById("pic").src="_"+localStorage.getItem("imgCount")+".png";
 	localStorage.setItem("imgCount",(parseInt(localStorage.getItem("imgCount"))+1)%20);
 	sData.splice(randVar, 1);
 	localStorage.setItem("sData",JSON.stringify(sData));
+	}
 }
 </script>
 </body>
