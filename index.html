@@ -20,7 +20,7 @@ th,td {
 </style>
 </head>
 <body>
-<table align="center" style="display:none;" id="tab1" border=0>
+<table align="center" style="visibility:hidden;" id="tab1" border=0>
 <tr>
 <img src="thankyou.png"/>
 </tr>
@@ -127,8 +127,8 @@ window.location.reload();
 }
 function next(){
 	if(sData.length==0){
-		document.getElementById("tab").style.display="none";
-		document.getElementById("tab1").style.display="flex";
+		document.getElementById("tab").style.visibility="hidden";
+		document.getElementById("tab1").style.visibility="visible";
 	}
 	else{
 	var randVar= Math.floor((Math.random() * sData.length));
