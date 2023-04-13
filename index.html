@@ -106,10 +106,7 @@ var seniorData=[["18021A0554","MANDRU UDAY BHASKAR"],
 ["20025A0566","BHARGAV KAGITHA"]];
 var sData;
 window.onload = function() {
-if(sData.length==0){
-		document.getElementById("tab").style.display="none";
-		document.getElementById("tab1").style.display="flex";
-	}
+
   if(localStorage.getItem("isOpened")!="true")
   {
 	reset();
@@ -118,6 +115,10 @@ if(sData.length==0){
   else{
 	sData=JSON.parse(localStorage.getItem("sData"));
   }
+if(sData.length==0){
+		document.getElementById("tab").style.display="none";
+		document.getElementById("tab1").style.display="flex";
+	}
 };
 function reset(){
 localStorage.setItem("sData",JSON.stringify(seniorData));
