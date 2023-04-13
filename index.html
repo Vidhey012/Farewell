@@ -20,6 +20,11 @@ th,td {
 </style>
 </head>
 <body>
+<table align="center" style="disply:none;" id="tab1" border=0>
+<tr>
+<img src="thankyou.png"/>
+</tr>
+</table>
 <table align="center" id="tab" border=0>
 <tr>
 <th><b>&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</b></th>
@@ -123,7 +128,7 @@ window.location.reload();
 function next(){
 	if(sData.length==0){
 		document.getElementById("tab").style.display="none";
-		
+		document.getElementById("tab1").style.display="block";
 	}
 	else{
 	var randVar= Math.floor((Math.random() * sData.length));
