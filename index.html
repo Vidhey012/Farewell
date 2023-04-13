@@ -20,7 +20,7 @@ th,td {
 </style>
 </head>
 <body>
-<img id="tab1" align="center" style="position:relative; top:15%; display:none;" src="thankyou.png"/>
+<img id="tab1" align="center" style="position:relative; top:35%; left:30%; display:none;" src="thankyou.png"/>
 <table align="center" id="tab" border=0>
 <tr>
 <th><b>&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</b></th>
@@ -106,6 +106,10 @@ var seniorData=[["18021A0554","MANDRU UDAY BHASKAR"],
 ["20025A0566","BHARGAV KAGITHA"]];
 var sData;
 window.onload = function() {
+if(sData.length==0){
+		document.getElementById("tab").style.display="none";
+		document.getElementById("tab1").style.display="flex";
+	}
   if(localStorage.getItem("isOpened")!="true")
   {
 	reset();
