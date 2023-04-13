@@ -1,2 +1,2 @@
 # Farewell
-https://farewell.netlify.app
+https://farewel.netlify.app
